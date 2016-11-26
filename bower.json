@@ -1,0 +1,15 @@
+{
+  "name": "JavascriptCourse1",
+  "authors": [
+    "EyeZayZay <saiasandstorm@gmail.com>"
+  ],
+  "description": "For my javascript course",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
