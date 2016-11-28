@@ -1,0 +1,18 @@
+body {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/91sqAJFwmJL._SL1400_.jpg");
+  background-color: purple;
+  color: white;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  padding:10px;
+}
+
+.crossout:checked {
+  text-decoration: line-through;
+}
