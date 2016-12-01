@@ -1,9 +1,10 @@
 
-function CrossOut() {
-  if(document.getElementsByClassName('crossout').checked) {
-// Get Id of selected checkbox, implement crossout class to checkbox item
+function CrossOut(id) {
+var selectedBox = document.getElementById(id);
+  if(selectedBox.firstChild.checked) {
+    selectedBox.style.textDecoration = "line-through";
   }
   else {
-// Get Id of selected checkbox, remove crossout class from checkbox item
+    selectedBox.style.textDecoration = "none";
   }
 }

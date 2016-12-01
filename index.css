@@ -12,7 +12,3 @@ div {
   border: 5px solid white;
   padding:10px;
 }
-
-.crossout:checked {
-  text-decoration: line-through;
-}

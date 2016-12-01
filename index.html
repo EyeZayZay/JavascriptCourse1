@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <title></title>
     <link href="index.css" rel="stylesheet">
+    <script src="index.js"></script>
   </head>
   <body>
     <div>
     Hello World
     <ul>
-      <li><input type="checkbox" class="crossout" id="cbox1" value="first_checkbox"><label for="">Chicken Breast</label></li>
-      <li><input type="checkbox" class="crossout" id="cbox2" value="first_checkbox"><label for="">Jasmine Rice</label></li>
-      <li><input type="checkbox" class="crossout" id="cbox3" value="first_checkbox"><label for="">Broccoli</label></li>
-      <li><input type="checkbox" class="crossout" id="cbox4" value="first_checkbox"><label for="">Chili Powder</label></li>
-      <li><input type="checkbox" class="crossout" id="cbox5" value="first_checkbox"><label for="">Garlic Powder</label></li>
-      <li><input type="checkbox" class="crossout" id="cbox6" value="first_checkbox"><label for="">Onions</label></li>
+      <li id="cbox1"><input type="checkbox" onclick="CrossOut('cbox1')"/>Chicken Breast</li>
+      <li id="cbox2"><input type="checkbox" onclick="CrossOut('cbox2')"/>Jasmine Rice</li>
+      <li id="cbox3"><input type="checkbox" onclick="CrossOut('cbox3')"/>Broccoli</li>
+      <li id="cbox4"><input type="checkbox" onclick="CrossOut('cbox4')"/>Chili Powder</li>
+      <li id="cbox5"><input type="checkbox" onclick="CrossOut('cbox5')"/>Garlic Powder</li>
+      <li id="cbox6"><input type="checkbox" onclick="CrossOut('cbox6')"/>Onions</li>
     </ul>
   </div>
   </body>
