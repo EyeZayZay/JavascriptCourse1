@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title></title>
     <link href="index.css" rel="stylesheet">
-    <script src="index.js"></script>
+
+    <script src="bower_components/moment/moment.js"></script>
+    <script>var future = moment().add('hours', 1).fromNow();
+    console.log(future);</script>
   </head>
   <body>
     <div>
