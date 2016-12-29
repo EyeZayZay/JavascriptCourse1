@@ -7,7 +7,7 @@
 6.The Question and Quiz classes must both contain an evaluate() function (or “grade” or “check”, whatever makes the most sense to you).
 a.The Quiz evaluate() must call evaluate() on each of the Question objects.
 b.The Question evaluate() must return true or false depending on whether the submitted question is correct. */
-
+// If we get away with it, continue, otherwise, irrelevant
 // each question should have the question, options and answer values
 class Question {
 
@@ -24,7 +24,7 @@ class Question {
 class Quiz {
 
   // hold an array of question objects
-  questions: string[];
+  questions: Question[];
 
   // hold a tally for correct answers
   correctCount: 0;
@@ -43,6 +43,7 @@ class Quiz {
     let container = document.getElementById("questions");
 
       // traverses questions and displays them on the page using innerHTML
+      // Something seems off
       for (var i = 1; i < this.questions.length + 1; i++) {
         container.innerHTML = "<label id=\"q" + i + "\"><strong>" + i + ". " + this.questions[i] + "</strong></label> <br> <br>";
         for (var j = 1; j < this.questions[i].options.length + 1; j++) {
@@ -58,11 +59,11 @@ class Quiz {
 
       // new four option boxes
       for (var i = 1; i < 5; i++) {
-        container.innerHTML = "Option " + i + ": <input type = \"text\" name = \"option" + i + ">";
+        container.innerHTML = "Option " + i + ": <input type = \"text\" name = \"newOption" + i + ">";
       }
 
       // Submit Question button
-      // we need to grab the user inputs and pass them into the addQuestion method
+      // ! we need to grab the user inputs and pass them into the addQuestion method
       container.innerHTML = "<button onclick=\"addQuestion()\">Submit Question</button><br><br>";
 
       // Take Quiz button
@@ -137,7 +138,7 @@ function isThereNull(setOfAnswers) {
 }
 
 // Traverses each question to check if there is a null (unanswered question)
-// What do we input into the isThereNull method? Clueless tbh
+// ! What do we input into the isThereNull method? Clueless tbh
 var flag = true;
 for (var i = 0; i < this.questions.length; i++) {
   // flag = isThereNull(); [need input]
@@ -187,3 +188,4 @@ else {
 /* To Do List */
 // 1. Check that every question was answered (fix null input)
 // 2. Properly allow the user to add new questions (grab user input)
+// Question: Do we have to do a null check to see if the user input all the fields to add a new question too?
