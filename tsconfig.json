@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
         "isolatedModules": false,
@@ -13,9 +13,7 @@
         "removeComments": true,
         "noLib": false,
         "preserveConstEnums": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "inlineSources": true,
-        "inlineSourceMap": true
+        "suppressImplicitAnyIndexErrors": true
     },
     "exclude": [
         "node_modules",

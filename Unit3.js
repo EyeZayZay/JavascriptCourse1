@@ -1,3 +1,26 @@
-let btn = document.getElementById('btnSubmit');
-btn.addEventListener('click', () => console.log('Did Something!'));
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVW5pdDMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJVbml0My50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxJQUFJLEdBQUcsR0FBRyxRQUFRLENBQUMsY0FBYyxDQUFDLFdBQVcsQ0FBQyxDQUFDO0FBQy9DLEdBQUcsQ0FBQyxnQkFBZ0IsQ0FBQyxPQUFPLEVBQUUsTUFBTSxPQUFPLENBQUMsR0FBRyxDQUFDLGdCQUFnQixDQUFDLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImxldCBidG4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYnRuU3VibWl0Jyk7XG5idG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoKSA9PiBjb25zb2xlLmxvZygnRGlkIFNvbWV0aGluZyEnKSk7XG4iXX0=
+var MyApp;
+(function (MyApp) {
+    angular.module('MyApp', ['ui.router']).config(function ($stateProvider, $locationProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('Home', {
+            url: '/',
+            templateUrl: 'ngApp/page1.html',
+            controller: MyApp.Controllers.Page1Controller,
+            controllerAs: 'controller'
+        })
+            .state('Page1', {
+            url: '/page1',
+            templateUrl: 'ngApp/page1.html',
+            controller: MyApp.Controllers.Page1Controller,
+            controllerAs: 'controller'
+        })
+            .state('Page2', {
+            url: '/page2',
+            templateUrl: 'ngApp/page2.html',
+            controller: MyApp.Controllers.Page2Controller,
+            controllerAs: 'controller'
+        });
+        $urlRouterProvider.otherwise("/");
+        $locationProvider.html5Mode(true);
+    });
+})(MyApp || (MyApp = {}));

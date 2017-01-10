@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MyApp">
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="Unit3.js"></script>
+    <base href="/" />
   </head>
-  <body>
-    <button id="btnSubmit">Do Something</button>
+  <body ng-controller="MainController as main">
+    <a ui-sref="Page1">Page 1</a> | <a ui-sref="Page2">Page 2</a> | <a ui-sref="Nowhere">Nowhere</a>
+    <hr />
+    $state.current.templateUrl = {{main.$state.current.templateUrl}}
+    <hr />
+
+    <ui-view></ui-view>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="Unit3.js"></script>
+    <script src="controller.js"></script>
   </body>
 </html>
